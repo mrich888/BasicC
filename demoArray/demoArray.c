@@ -10,6 +10,7 @@
 
 int main()
 {
+#if 0
     /* 方法一： 使用定义即初始化 */
     int array[BUFFER_SIZE] = {1, 2, 3};
 
@@ -26,7 +27,13 @@ int main()
     /* 数组的地址和数组中首元素的地址是一样的 */
     // printf("%p\n",array);
     // printf("%p\n",&array[0]);
+#endif 
+    int array[BUFFER_SIZE];
+    /* 数组的越界访问*/
+    /* 判断索引的有效性*/
+    printf("array[-1]:%d\n", array[-1]);
+    printf("array[10]:%d\n", array[10]);
 
-   
+
     return 0;
 }
