@@ -109,7 +109,7 @@ int main()
    printf("notVal:%d\n", notVal);
 
     return 0;
-#endif
+
     /* 且 或 非 */
 
     int condition1 = 1;
@@ -135,6 +135,13 @@ int main()
     {
         printf("net hello word\n");
     }
+#endif
+
+    int num1 = 10;
+    int num2 = 30;
+
+    int num3 = (num1 > num2) ? 100 : 660;
+    printf("num %d\n",num3); 
 
 }
 
