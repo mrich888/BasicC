@@ -91,13 +91,13 @@ int main()
     printf("sum:%d\n", sum);
 
     int num3 = calculateSub(num1, num2);
-    printf("sum:%d\n", sum);
+    printf("sum:%d\n", num3);
 
     int amass = calculateMul(num1, num2);
-    printf("sum:%d\n", sum);
+    printf("sum:%d\n", amass);
 
     int num4 = calculateDiv(num1, num2);
-    printf("sum:%d\n", sum);
+    printf("sum:%d\n", num4);
 
     return 0;
 }
