@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "calculateFunc.h"
+#include "myString.h"
 
 /* 函数参数：可有可无 */
 /* 函数返回值：可有可无 
@@ -53,6 +54,7 @@ enum STATUS_CODE
 typedef enum STATUS_CODE STATUS_CODE;
 #endif
 
+#define BUFFER_SIZE 20
 int main()
 {
 #if 0
@@ -84,7 +86,7 @@ int main()
     // char * ptr = "hello word";
     // myAddNum(a, ptr); 错误示范：函数返回的是int类型，ptr虽然打印的是地址（数字），但是char
 #endif   
-
+#if 0
     int num1 = 50;
     int num2 = 60;
     int sum = calculateAdd(num1,num2);
@@ -98,6 +100,38 @@ int main()
 
     int num4 = calculateDiv(num1, num2);
     printf("sum:%d\n", num4);
-
+#endif
+#if 0
+    /* 字符串长度 */
+    char *pStr = "hello\0 world";//长度为5，是因为hello后面就有个\0，计数到\0的位置就会停止
+    int len = 0;
+#if 1
+    len = myStrlen(pStr);
+#else 
+    len = strlen(pStr);
+#endif
+    printf("len:%d\n", len);
+#endif
+#if 0
+    /* 字符串拷贝 */
+    char str1[BUFFER_SIZE] = "hello";
+    char str2[BUFFER_SIZE] = "HELLO";
+    str1[BUFFER_SIZE] = myStrcpy(str1, str2);
+    printf("str1:%s\n", str1);
+#endif
+#if 0
+    /* 字符串拼接 */
+    char str1[BUFFER_SIZE] = "hello";
+    char str2[BUFFER_SIZE] = " world";
+    str1[BUFFER_SIZE] = myStrcat(str1, str2);
+    printf("str1:%s\n", str1);
+#endif
+#if 1
+    /* 字符串拷贝 */
+    char str1[BUFFER_SIZE] = "hello";
+    char str2[BUFFER_SIZE] = "HELLO";
+    int ret = myStrcmp(str1, str2);
+    printf("str1:%d\n", ret);
+#endif
     return 0;
 }
